@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: #232323;
+}
+
+body {
+  font-family: "Roboto", "Pretendard", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: basiccolor;
+}
+
+#hd {
+  border-bottom: 1px solid #232323;
+}
+#hd .logo img {
+  height: 35px;
+  max-width: 143px;
+}
+#hd #gnb li {
+  padding-right: 2rem;
+}
+#hd #gnb li:last-of-type {
+  padding-right: 0;
+}
+#hd #gnb li a {
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+}
+#hd #gnb li a::after {
+  position: absolute;
+  content: "";
+  background-color: #01A7A7;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -12px;
+  transition: 0.2s;
+}
+#hd #gnb li a:hover {
+  color: #01A7A7;
+}
+#hd #gnb li a:hover::after {
+  width: 100%;
+}
+#hd .ham {
+  position: relative;
+  border: 0;
+}
+#hd .ham::after {
+  content: "\f479";
+  position: absolute;
+  right: 0;
+}
+#hd .ham span {
+  font-size: 0;
+}

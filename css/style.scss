@@ -1,0 +1,118 @@
+$basiccolor : #232323;
+$gnbcolor: #01A7A7;
+$activecolor1: #F59C00;
+$activecolor2: #EA4263;
+$activecolor3: #3363A1;
+$fontbasic : "Pretendard";
+$enfont: "Roboto";
+$fontsize : 1rem;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: $basiccolor;
+}
+
+body {
+  font-family: $enfont, $fontbasic, sans-serif;
+  font-size: $fontsize;
+  font-weight: 300;
+  color: basiccolor;
+}
+
+
+// 헤더
+
+#hd {
+
+  border-bottom: 1px solid $basiccolor;
+
+
+  .logo {
+
+
+    img {
+      height: 35px;
+      max-width: 143px;
+    }
+  }
+
+  #gnb {
+    li {
+      padding-right: 2rem;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      a {
+        line-height: 100px;
+        font-size: 20px;
+        font-weight: 500;
+
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: $gnbcolor;
+          height: 3px;
+          width: 0;
+          left: 0;
+          bottom: -12px;
+          transition: .2s;
+        }
+
+        &:hover {
+          color: $gnbcolor;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .ham {
+    position: relative;
+    border: 0;
+
+    &::after {
+      content: "\F479";
+      position: absolute;
+      right: 0;
+
+    }
+
+    span {
+      font-size: 0;
+    }
+  }
+
+}
