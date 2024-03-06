@@ -15,10 +15,12 @@ $fontsize : 1rem;
 
 }
 
-ul,
-li {
+ul {
   padding: 0;
   margin: 0;
+}
+
+li {
   list-style: none;
 }
 
@@ -38,6 +40,17 @@ a {
   color: $basiccolor;
 }
 
+
+.w-0 {
+  width: 0;
+  white-space: nowrap;
+}
+
+
+.zup {
+  z-index: 10000;
+}
+
 body {
   font-family: $enfont, $fontbasic, sans-serif;
   font-size: $fontsize;
@@ -51,6 +64,12 @@ body {
 #hd {
 
   border-bottom: 1px solid $basiccolor;
+  background-color: #fff;
+
+  @media (max-width:990px) {
+
+    border: 0;
+  }
 
 
   .logo {
@@ -60,11 +79,60 @@ body {
       height: 35px;
       max-width: 143px;
     }
+
   }
 
-  #gnb {
+
+}
+
+.navi {
+
+  @media (max-width:990px) {
+    padding: 2rem 0;
+  }
+
+  .gnb {
+
+    // 반응형
+    @media (max-width:990px) {
+      padding-top: 3rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: #fff;
+
+
+    }
+
+    &.act {
+      display: flex;
+
+      .bi-list {
+
+
+        &::before {
+          content: "\F659";
+          right: 0;
+        }
+
+      }
+    }
+
+
+
     li {
       padding-right: 2rem;
+
+      @media (max-width:990px) {
+
+        padding: 0;
+      }
 
       &:last-of-type {
         padding-right: 0;
@@ -76,6 +144,13 @@ body {
         font-weight: 500;
 
         position: relative;
+
+        @media (max-width:990px) {
+
+          line-height: 3;
+
+
+        }
 
         &::after {
           position: absolute;
@@ -98,21 +173,26 @@ body {
       }
     }
   }
+}
 
-  .ham {
-    position: relative;
-    border: 0;
+// 모바일버튼
 
-    &::after {
-      content: "\F479";
-      position: absolute;
-      right: 0;
+.btn {
 
-    }
+  border: 0;
 
-    span {
-      font-size: 0;
-    }
+
+
+  .bi-list {
+    font-size: 1.7rem;
+
+
   }
+
+  span {
+    padding: 0;
+    font-size: 0;
+  }
+
 
 }

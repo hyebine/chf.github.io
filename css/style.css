@@ -3,10 +3,12 @@
   padding: 0;
 }
 
-ul,
-li {
+ul {
   padding: 0;
   margin: 0;
+}
+
+li {
   list-style: none;
 }
 
@@ -26,6 +28,15 @@ a {
   color: #232323;
 }
 
+.w-0 {
+  width: 0;
+  white-space: nowrap;
+}
+
+.zup {
+  z-index: 10000;
+}
+
 body {
   font-family: "Roboto", "Pretendard", sans-serif;
   font-size: 1rem;
@@ -35,24 +46,67 @@ body {
 
 #hd {
   border-bottom: 1px solid #232323;
+  background-color: #fff;
+}
+@media (max-width: 990px) {
+  #hd {
+    border: 0;
+  }
 }
 #hd .logo img {
   height: 35px;
   max-width: 143px;
 }
-#hd #gnb li {
+
+@media (max-width: 990px) {
+  .navi {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 990px) {
+  .navi .gnb {
+    padding-top: 3rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+  }
+}
+.navi .gnb.act {
+  display: flex;
+}
+.navi .gnb.act .bi-list::before {
+  content: "\f659";
+  right: 0;
+}
+.navi .gnb li {
   padding-right: 2rem;
 }
-#hd #gnb li:last-of-type {
+@media (max-width: 990px) {
+  .navi .gnb li {
+    padding: 0;
+  }
+}
+.navi .gnb li:last-of-type {
   padding-right: 0;
 }
-#hd #gnb li a {
+.navi .gnb li a {
   line-height: 100px;
   font-size: 20px;
   font-weight: 500;
   position: relative;
 }
-#hd #gnb li a::after {
+@media (max-width: 990px) {
+  .navi .gnb li a {
+    line-height: 3;
+  }
+}
+.navi .gnb li a::after {
   position: absolute;
   content: "";
   background-color: #01A7A7;
@@ -62,21 +116,20 @@ body {
   bottom: -12px;
   transition: 0.2s;
 }
-#hd #gnb li a:hover {
+.navi .gnb li a:hover {
   color: #01A7A7;
 }
-#hd #gnb li a:hover::after {
+.navi .gnb li a:hover::after {
   width: 100%;
 }
-#hd .ham {
-  position: relative;
+
+.btn {
   border: 0;
 }
-#hd .ham::after {
-  content: "\f479";
-  position: absolute;
-  right: 0;
+.btn .bi-list {
+  font-size: 1.7rem;
 }
-#hd .ham span {
+.btn span {
+  padding: 0;
   font-size: 0;
 }

@@ -41,49 +41,180 @@
 </head>
 
 <body>
-  <div id="wrap">
+  <div class="wrap">
 
     <!-- 상단 -->
-    <header id="hd" class="fiexd top">
+    <header id="hd" class="fixed-top">
       <div class="container d-flex align-items-center justify-content-between p-0">
-        <a href="#" class="logo">
-          <img src="./img/logo.png" alt="로고이미지"></a>
 
-        <ul id="gnb" class="d-lg-flex ">
-          <li><a href="#place" class="">축전장소</a></li>
-          <li><a href="#introduction" class="">축전소개</a></li>
-          <li><a href="#program" class="">프로그램</a></li>
-          <li><a href="#notice" class="">공지사항</a></li>
-        </ul>
+        <h1 class="logo w-0">
+          <a href="#" class="d-block">
+            <img class="d-block" src="./img/logo.png" alt="로고이미지">
+          </a>
+        </h1>
 
-        <button class="ham">
-          <span>메뉴버튼</span>
+        <!-- 모바일버튼 -->
+        <button class="btn order-3">
+          <i class="bi bi-list"></i>
+          <span class="invisible">메뉴버튼</span>
         </button>
+
+        <!-- 네비게이션 -->
+        <div class="navi">
+          <ul class="gnb d-lg-flex justify-content-center">
+            <li><a href="#place" class="">축전장소</a></li>
+            <li><a href="#introduction" class="">축전소개</a></li>
+            <li><a href="#program" class="">프로그램</a></li>
+            <li><a href="#notice" class="">공지사항</a></li>
+          </ul>
+        </div>
+
+
 
       </div>
 
     </header>
 
-    <!-- 메인 슬라이드배너 -->
-    <div id="mainbanner"></div>
+    <!-- 상단배너 -->
+    <div id="mainbanner">
+      <div class="maintxt container text-center">
+        <!-- <span class="d-block">k-Royal Culture Festival <strong>10th Anniversary</strong></span> -->
+      </div>
+
+      <!-- 슬라이드 -->
+      <div id="mainslide">
+
+        <div class="swiper container">
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h3></h3>
+              <p></p>
+              <a href="">
+                <img src="" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <h3></h3>
+              <p></p>
+              <a href="">
+                <img src="" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <h3></h3>
+              <p></p>
+              <a href="">
+                <img src="" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+
+      </div>
+    </div>
 
     <!-- 축전장소 -->
-    <div id="place"></div>
+    <div id="place" class="container">
+      <h3></h3>
+      <p></p>
+
+      <ul>
+        <li><a href=""><img src="" alt=""><span></span></a></li>
+        <li><a href=""><img src="" alt=""><span></span></a></li>
+        <li><a href=""><img src="" alt=""><span></span></a></li>
+        <li><a href=""><img src="" alt=""><span></span></a></li>
+        <li><a href=""><img src="" alt=""><span></span></a></li>
+      </ul>
+    </div>
 
     <!-- 축전소개 -->
-    <div id="introduction"></div>
+    <div id="introduction" class="container"></div>
 
     <!-- 프로그램 -->
-    <div id="program"></div>
+    <div id="program" class="container">
+      <h3></h3>
+      <p></p>
+      <a href=""></a>
+      <ul>
+        <li class="offset-6"></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </div>
 
     <!--서브 슬라이드 -->
-    <div id="subslide"></div>
+    <div id="subslide">
+
+    </div>
 
     <!-- 이벤트 -->
-    <div id="event"></div>
+    <div id="event">
+      <div class="banner container">
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class=""></div>
+    </div>
 
     <!-- 공지사항 -->
-    <div id="notice"></div>
+    <div id="notice" class="container">
+      <h3></h3>
+      <p></p>
+      <a href=""></a>
+      <div class="bgnotice">
+        <ul class="ms-lg-auto col-lg-8">
+          <li>
+            <a href="">
+              <i></i>
+              <strong></strong>
+            </a>
+            <p>
+
+            </p>
+          </li>
+          <li>
+            <a href="">
+              <i></i>
+              <strong></strong>
+            </a>
+            <p>
+
+            </p>
+          </li>
+          <li>
+            <a href="">
+              <i></i>
+              <strong></strong>
+            </a>
+            <p>
+
+            </p>
+          </li>
+          <li>
+            <a href="">
+              <i></i>
+              <strong></strong>
+            </a>
+            <p>
+
+            </p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
 
     <!-- 하단 -->
     <footer id="ft"></footer>
