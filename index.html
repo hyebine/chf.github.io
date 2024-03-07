@@ -30,7 +30,6 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- 제이쿼리 -->
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
@@ -54,10 +53,12 @@
         </h1>
 
         <!-- 모바일버튼 -->
-        <button class="btn order-3">
-          <i class="bi bi-list"></i>
+        <div id="btn" class="position-relative order-3 ">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
           <span class="invisible">메뉴버튼</span>
-        </button>
+        </div>
 
         <!-- 네비게이션 -->
         <div class="navi">
@@ -76,46 +77,46 @@
     </header>
 
     <!-- 상단배너 -->
-    <div id="mainbanner">
-      <div class="maintxt container text-center">
-        <!-- <span class="d-block">k-Royal Culture Festival <strong>10th Anniversary</strong></span> -->
+    <div id="mainbanner" class="container">
+      <div class="maintxt text-center">
+        <span class="d-block">k-Royal Culture Festival <strong>10th Anniversary</strong></span>
       </div>
 
       <!-- 슬라이드 -->
       <div id="mainslide">
 
-        <div class="swiper container">
-
+        <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <h3></h3>
-              <p></p>
-              <a href="">
-                <img src="" alt="">
-              </a>
+            <div class="swiper-slide bg0">
+              <div class="content">
+                <h3>궁중문화축전 10주년 기념</h3>
+                <p>더 나은 글로벌 축제로 거듭날<br />
+                  궁중문화축전의 슬로건 공모전 수상작을 발표합니다!</p>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <h3></h3>
-              <p></p>
-              <a href="">
-                <img src="" alt="">
-              </a>
+
+            <div class="swiper-slide bg1">
+              <div class="content">
+                <h3>‘함께한 궁중문화 함께할 국가유산’</h3>
+                <p>10년의 시간과 함께 더 멋지게 발돋움할<br />
+                  궁중문화축전을 기대해 주세요.</p>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <h3></h3>
-              <p></p>
-              <a href="">
-                <img src="" alt="">
-              </a>
+
+            <div class="swiper-slide bg2">
+              <div class="content">
+                <h3>2024 궁중문화축전 10주년</h3>
+                <p>4월 27일, 봄 궁중문화축전이 시작됩니다.</p>
+              </div>
             </div>
           </div>
 
           <div class="swiper-pagination"></div>
 
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
+          <div class="swiper_btn">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
 
       </div>
@@ -136,7 +137,9 @@
     </div>
 
     <!-- 축전소개 -->
-    <div id="introduction" class="container"></div>
+    <div id="introduction" class="container">
+
+    </div>
 
     <!-- 프로그램 -->
     <div id="program" class="container">

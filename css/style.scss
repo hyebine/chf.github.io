@@ -69,15 +69,23 @@ body {
   @media (max-width:990px) {
 
     border: 0;
+
+
+    .container:before {
+      content: "";
+    }
   }
 
 
   .logo {
 
 
+
     img {
       height: 35px;
       max-width: 143px;
+
+
     }
 
   }
@@ -113,15 +121,6 @@ body {
     &.act {
       display: flex;
 
-      .bi-list {
-
-
-        &::before {
-          content: "\F659";
-          right: 0;
-        }
-
-      }
     }
 
 
@@ -177,22 +176,114 @@ body {
 
 // 모바일버튼
 
-.btn {
-
+#btn {
+  width: 24px;
+  height: 16px;
+  background: transparent;
   border: 0;
+  cursor: pointer;
+
+  .line {
+    position: absolute;
+    background: $basiccolor;
+    display: block;
+    width: 100%;
+    height: 2px;
+    transition: 0.5s;
+    z-index: 1000;
 
 
+    &:nth-child(1) {
+      top: 0;
 
-  .bi-list {
-    font-size: 1.7rem;
+    }
 
+    &:nth-child(2) {
+      top: calc(50% - 1px);
+
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+
+    }
 
   }
 
-  span {
-    padding: 0;
-    font-size: 0;
-  }
+  @media (max-width:990px) {
 
+    &.change {
+      .line {
+        &:nth-child(1) {
+          top: 50%;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          top: 50%;
+          transform: rotate(-45deg);
+        }
+      }
+
+    }
+  }
+}
+
+
+// 상단배너
+
+#mainbanner {
+
+  margin-top: 5.5rem;
+
+  .maintxt {
+    padding: 4rem 0;
+    font-size: 3.1rem;
+
+    @media (max-width:990px) {
+      padding: 1rem 0;
+      font-size: 1.3rem;
+
+    }
+  }
+}
+
+// 슬라이드
+
+#mainslide {
+
+
+  .swiper {
+
+
+    .swiper-slide {
+      height: 0;
+      padding-top: 50%;
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: right center;
+
+      @media (max-width:990px) {
+        padding-top: 100%;
+
+      }
+
+      &.bg0 {
+        background-image: url(../img/banner1.jpg);
+      }
+
+      &.bg1 {
+        background-image: url(../img/banner2.jpg);
+      }
+
+      &.bg2 {
+        background-image: url(../img/banner3.jpg);
+      }
+    }
+  }
 
 }
