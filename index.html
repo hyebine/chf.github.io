@@ -85,10 +85,10 @@
       <!-- 슬라이드 -->
       <div id="mainslide">
 
-        <div class="swiper">
+        <div class="swiper position-relative">
           <div class="swiper-wrapper">
             <div class="swiper-slide bg0">
-              <div class="content">
+              <div class="content position-absolute d-none d-lg-block">
                 <h3>궁중문화축전 10주년 기념</h3>
                 <p>더 나은 글로벌 축제로 거듭날<br />
                   궁중문화축전의 슬로건 공모전 수상작을 발표합니다!</p>
@@ -96,7 +96,7 @@
             </div>
 
             <div class="swiper-slide bg1">
-              <div class="content">
+              <div class="content position-absolute d-none d-lg-block">
                 <h3>‘함께한 궁중문화 함께할 국가유산’</h3>
                 <p>10년의 시간과 함께 더 멋지게 발돋움할<br />
                   궁중문화축전을 기대해 주세요.</p>
@@ -104,18 +104,19 @@
             </div>
 
             <div class="swiper-slide bg2">
-              <div class="content">
+              <div class="content position-absolute d-none d-lg-block">
                 <h3>2024 궁중문화축전 10주년</h3>
                 <p>4월 27일, 봄 궁중문화축전이 시작됩니다.</p>
               </div>
             </div>
           </div>
 
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination d-block d-lg-none p-unset"></div>
 
-          <div class="swiper_btn">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+
+          <div class="swiper_btn d-flex">
+            <div class="swiper-button-prev p-unset"></div>
+            <div class="swiper-button-next p-unset"></div>
           </div>
         </div>
 
@@ -124,35 +125,118 @@
 
     <!-- 축전장소 -->
     <div id="place" class="container">
-      <h3></h3>
-      <p></p>
+      <h3>축전장소</h3>
+      <p>궁중문화축전의 장소를 소개합니다.</p>
 
-      <ul>
-        <li><a href=""><img src="" alt=""><span></span></a></li>
-        <li><a href=""><img src="" alt=""><span></span></a></li>
-        <li><a href=""><img src="" alt=""><span></span></a></li>
-        <li><a href=""><img src="" alt=""><span></span></a></li>
-        <li><a href=""><img src="" alt=""><span></span></a></li>
+      <ul class="d-flex justify-content-center align-items-end">
+        <li class="place_li">
+          <a href="#none" class="d-flex flex-column align-items-center">
+            <img src="./img/place1.png" alt="경복궁" class="d-block img-fluid">
+
+          </a>
+        </li>
+        <li class="place_li">
+          <a href="#none" class="d-flex flex-column align-items-center">
+            <img src="./img/place2.png" alt="창덕궁" class="d-block img-fluid">
+
+          </a>
+        </li>
+        <li class="place_li">
+          <a href="#none" class="d-flex flex-column align-items-center">
+            <img src="./img/place3.png" alt="덕수궁" class="d-block img-fluid">
+
+          </a>
+        </li>
+        <li class="place_li">
+          <a href="#none" class="d-flex flex-column align-items-center">
+            <img src="./img/place4.png" alt="창경궁" class="d-block img-fluid">
+          </a>
+        </li>
+        <li class="place_li">
+          <a href="#none" class="d-flex flex-column align-items-center">
+            <img src="./img/place5.png" alt="경희궁" class="d-block img-fluid">
+
+          </a>
+        </li>
       </ul>
     </div>
 
     <!-- 축전소개 -->
-    <div id="introduction" class="container">
+    <div id="introduction" class="container d-flex justify-content-around align-items-center">
+
+      <div class="intro">
+        <img src="./img/introbg.jpg" alt="축전이미지" class="d-block img-fluid">
+      </div>
+
+      <div class="intro_txt">
+        <h3>‘오늘, 궁을 만나다’</h3>
+        <p>‘궁중문화축전’은 대한민국을 대표하는 문화유산이며<br />
+          조선과 대한제국의 역사를 품고 있는 경복궁, 창덕궁,<br />
+          창경궁, 덕수궁, 경희궁 등 서울 소재 5개의 궁궐과<br />
+          종묘, 사직단에서 펼쳐지는 문화유산 축제입니다.</p>
+        <a href="#" class="d-none d-lg-block">
+          <span>More</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </div>
+
 
     </div>
 
     <!-- 프로그램 -->
     <div id="program" class="container">
-      <h3></h3>
-      <p></p>
-      <a href=""></a>
-      <ul>
-        <li class="offset-6"></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
+      <h3>프로그램</h3>
+      <p>궁중문화축전의 다양한 프로그램을 알려드립니다.</p>
+      <a href="#" class="d-none d-lg-block">
+        <span>More</span>
+        <i class="bi bi-arrow-up-right"></i>
+      </a>
+      <ul class="pro_content d-flex flex-wrap">
+        <li class="offset-6 col-3 position-relative">
+          <a href="" class="d-flex flex-column justify-content-between">
+            <span class="stitle border-left">경복궁</span>
+            <strong>[체험] 경복궁 생과방</strong>
+            <span class="timeinfo">10:00 11:40 13:50 15:30</span>
+          </a>
+        </li>
+        <li class="col-3 position-relative border-start-0">
+          <a href="" class="d-flex flex-column justify-content-between">
+            <span class="stitle border-left">경복궁</span>
+            <strong>[체험] 경복궁 생과방</strong>
+            <span class="timeinfo">10:00 11:40 13:50 15:30</span>
+          </a>
+        </li>
+        <li class="col-3 position-relative ">
+          <a href="" class="d-flex flex-column justify-content-between">
+            <span class="stitle border-left">경복궁</span>
+            <strong>[체험] 경복궁 생과방</strong>
+            <span class="timeinfo">10:00 11:40 13:50 15:30</span>
+          </a>
+        </li>
+        <li class="col-3  position-relative border-start-0">
+          <a href="" class="d-flex flex-column justify-content-between">
+            <span class="stitle border-left">경복궁</span>
+            <strong>[체험] 경복궁 생과방</strong>
+            <span class="timeinfo">10:00 11:40 13:50 15:30</span>
+          </a>
+        </li>
+        <li class="col-3 position-relative border-start-0 border-top-0">
+          <a href="" class="d-flex flex-column justify-content-between">
+            <span class="stitle border-left">창경궁</span>
+            <strong>[체험] 효, 쉼이 깃든 궁궐 창경궁</strong>
+            <span class="timeinfo"> 00:00 ~ 00:00</span>
+          </a>
+        </li>
+        <li class="col-3 position-relative border-start-0 border-top-0">
+          <a href="" class="d-flex flex-column justify-content-between">
+            <span class="stitle border-left">창경궁</span>
+            <strong>[전시] 창경궁 명칭 환원 40주년
+              기념 사진전
+              《다시 찾는, 궁》</strong>
+            <span class="timeinfo">10:00 18:00</span>
+          </a>
+        </li>
+
       </ul>
     </div>
 

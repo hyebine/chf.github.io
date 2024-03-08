@@ -51,12 +51,19 @@ a {
   z-index: 10000;
 }
 
+.p-unset {
+  position: unset !important;
+}
+
 body {
   font-family: $enfont, $fontbasic, sans-serif;
   font-size: $fontsize;
   font-weight: 300;
   color: basiccolor;
 }
+
+
+
 
 
 // 헤더
@@ -182,6 +189,7 @@ body {
   background: transparent;
   border: 0;
   cursor: pointer;
+  transform: translateX(-50%);
 
   .line {
     position: absolute;
@@ -241,7 +249,7 @@ body {
   margin-top: 5.5rem;
 
   .maintxt {
-    padding: 4rem 0;
+    padding-top: 4rem;
     font-size: 3.1rem;
 
     @media (max-width:990px) {
@@ -265,10 +273,13 @@ body {
       padding-top: 50%;
       background-repeat: no-repeat;
       background-size: auto;
-      background-position: right center;
+      background-position: right bottom;
+      background-color: white;
 
       @media (max-width:990px) {
         padding-top: 100%;
+        // background-size: 100%;
+
 
       }
 
@@ -282,6 +293,254 @@ body {
 
       &.bg2 {
         background-image: url(../img/banner3.jpg);
+      }
+
+      // 타이틀 
+      .content {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        line-height: 1.5;
+
+        h3 {
+          font-size: 40px;
+          line-height: 2;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+
+}
+
+
+// 스와이퍼 
+
+#mainslide {
+
+  .swiper_btn {
+    z-index: 99999;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.swiper_btn {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    padding: 1.2rem;
+    border: 1px solid $basiccolor;
+
+
+    @media (max-width:990px) {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    margin-right: .5rem;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    display: none;
+  }
+
+  .swiper-button-prev::before,
+  .swiper-button-next::before {
+    font-size: 2rem;
+    font-family: bootstrap-icons;
+    color: $basiccolor;
+
+
+  }
+
+  .swiper-button-prev::before {
+    content: "\F12C";
+  }
+
+  .swiper-button-next::before {
+    content: "\F135";
+
+  }
+}
+
+// 페이지네이션
+#mainslide {
+  .swiper-pagination {
+    margin-top: 1rem;
+
+    .swiper-pagination-bullet {
+      border: 1px solid $basiccolor;
+      border-radius: 0;
+      padding: 0.3rem;
+      opacity: 1;
+      background: none;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $basiccolor;
+    }
+  }
+}
+
+// 축전장소
+
+#place {
+  margin-top: 9rem;
+
+  h3 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 3;
+  }
+
+
+}
+
+#place {
+
+
+  .place_li {
+    padding-top: 2rem;
+
+    display: flex;
+    align-items: center;
+
+
+    &:not(:first-child)::before {
+      content: "";
+      border-right: 1px solid #C4C4C4;
+      margin: 0 2rem;
+      height: 70px;
+
+
+    }
+
+
+    @media (max-width:990px) {
+
+      padding: 0.4rem;
+
+      &:not(:first-child)::before {
+
+        display: none;
+      }
+    }
+
+
+    img {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+
+
+
+
+
+// 축전소개
+
+#introduction {
+  margin-top: 200px;
+
+  @media (max-width:990px) {
+    margin-top: 100px;
+
+    flex-direction: column;
+  }
+
+  .intro_txt {
+    h3 {
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 3;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+    a {
+      padding-top: 3rem;
+
+      span {
+        font-weight: 400;
+      }
+    }
+
+  }
+}
+
+
+
+// 프로그램
+
+#program {
+  margin-top: 200px;
+
+  @media (max-width:990px) {
+    margin-top: 100px;
+  }
+
+  h3 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  a {
+
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+}
+
+.ml-n3px {
+  margin-left: -3px;
+}
+
+.mt-n3px {
+  margin-top: -3px;
+}
+
+.pro_content {
+  li {
+
+    background: transparent;
+    border: 2px solid #000;
+    clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
+    min-height: 300px;
+    padding: 2rem;
+
+
+    a {
+      height: 100%;
+
+      strong {
+        margin-bottom: auto;
       }
     }
   }
