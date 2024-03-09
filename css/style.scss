@@ -441,8 +441,10 @@ body {
     }
 
 
+
     img {
       padding-bottom: 1rem;
+
     }
   }
 }
@@ -508,8 +510,8 @@ body {
     font-weight: 300;
   }
 
-  a {
-
+  .more {
+    margin-top: 11rem;
 
     span {
       font-weight: 400;
@@ -518,31 +520,326 @@ body {
 
 }
 
-.ml-n3px {
-  margin-left: -3px;
-}
+// .ml-n3px {
+//   margin-left: -3px;
+// }
 
-.mt-n3px {
-  margin-top: -3px;
-}
+// .mt-n3px {
+//   margin-top: -3px;
+// }
 
 .pro_content {
+  margin-top: -20.5rem;
+
+  flex-wrap: wrap;
+
+  @media (max-width:990px) {
+
+    margin-top: 3rem;
+
+  }
+
+
   li {
 
     background: transparent;
-    border: 2px solid #000;
+    border: 2px solid $basiccolor;
     clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
-    min-height: 300px;
+    min-height: 360px;
+
     padding: 2rem;
 
 
     a {
       height: 100%;
+      cursor: default;
+
+      .stitle {
+        font-size: 14px;
+        padding-bottom: 40px;
+
+        &::before {
+          content: '';
+          margin-right: 0.5rem;
+          border-left: 0.3rem solid $activecolor1;
+
+        }
+
+        &.gnbcolor::before {
+          border-color: $gnbcolor;
+        }
+
+        &.active2::before {
+          border-color: $activecolor2;
+        }
+
+        &.active3::before {
+          border-color: $activecolor3;
+        }
+
+      }
 
       strong {
+        font-size: 20px;
+        font-weight: 500;
         margin-bottom: auto;
+
+      }
+
+      .timeinfo {
+        font-size: 16px;
       }
     }
   }
+
+}
+
+// 호버 이미지
+
+
+.pro_li {
+
+
+  &:hover {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+
+
+    &.bg0 {
+      background-image: url('../img/pro1.jpg');
+
+
+    }
+
+    &.bg1 {
+      background-image: url('../img/pro2.jpg');
+
+
+    }
+
+    &.bg2 {
+      background-image: url('../img/pro3.jpg');
+
+
+    }
+
+    &.bg3 {
+      background-image: url('../img/pro4.jpg');
+
+
+    }
+
+    &.bg4 {
+      background-image: url('../img/pro5.jpg');
+
+
+    }
+
+    &.bg5 {
+      background-image: url('../img/pro6.jpg');
+
+
+    }
+
+
+
+  }
+
+
+  &:hover .stitle,
+  &:hover strong,
+  &:hover .timeinfo {
+    display: none;
+  }
+
+
+
+  @media (max-width:990px) {
+
+    background-image: none !important;
+
+
+    &:hover .stitle,
+    &:hover strong,
+    &:hover .timeinfo {
+      display: block;
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      border-bottom: 0;
+    }
+
+    &:nth-of-type(5) {
+
+      border-left: 2px solid $basiccolor !important;
+      ;
+    }
+
+  }
+}
+
+
+
+// 서브 슬라이드
+
+#subscroll {
+  margin: 7rem 0;
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+    overflow-x: hidden;
+
+    .swiper-slide {
+      font-size: 80px;
+      font-weight: 700;
+      white-space: nowrap;
+
+
+
+      // white-space: nowrap;
+    }
+
+    .outtxt {
+      color: #fff;
+      -webkit-text-stroke: 2px $basiccolor;
+
+
+    }
+
+  }
+
+}
+
+//이벤트
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#event {
+
+  font-family: 'GmarketSansMedium' !important;
+  font-size: 1rem;
+
+
+  .banner {
+    gap: 1rem;
+  }
+}
+
+#event {
+  .starevent {
+    margin-top: 10rem;
+    max-height: 391px;
+    height: 100vw;
+    background-image: url('../img/eventbg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    @media (max-width:990px) {
+      height: 100vw;
+      max-height: 713px;
+      background-image: url('../img/moeventbg.jpg');
+      background-repeat: no-repeat;
+
+    }
+
+    .content {
+      color: #fff;
+
+      .toptxt {
+        padding-top: 1rem;
+        line-height: 3;
+
+        & .i::before {
+          content: '\F62A';
+          font-family: "bootstrap-icons";
+        }
+
+        h3 {
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
+
+#event {
+  .starevent {
+
+
+    .coupon {
+      width: 35%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .infotxt {
+      font-size: 14px;
+      font-weight: 100;
+
+      strong {
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      .day {
+        line-height: 3;
+      }
+
+    }
+  }
+}
+
+@media (max-width:990px) {
+
+  .event_wrap {
+    flex-direction: column-reverse !important;
+    text-align: center !important;
+    padding-top: 4rem;
+
+    .coupon {
+      padding-top: 2rem;
+      width: 80% !important;
+
+    }
+  }
+
+}
+
+
+// 공지사항
+
+#notice {
+
+  h3 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .more {
+    margin-top: 4rem;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
 
 }

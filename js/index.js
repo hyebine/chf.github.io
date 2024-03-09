@@ -28,3 +28,24 @@ var mainswiper = new Swiper("#mainslide .swiper", {
     disableOnInteraction: false,
   },
 });
+
+
+
+// 슬라이드
+
+
+$('.swiper').each(function (index) {
+  t = $(this);
+  t.addClass('swiepr-' + index);
+
+  let swiper = new Swiper(t, {
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    speed: 5000,
+    loop: true,
+    loopAdditionalSlides: 1,
+    slidesPerView: 3,
+  });
+});
