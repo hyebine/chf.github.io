@@ -535,6 +535,13 @@ body {
     width: 80% !important;
   }
 }
+.noticewrap {
+  height: 100vw;
+  max-height: 1400px;
+  background-image: url("../img/noticebg.png");
+  background-repeat: no-repeat;
+}
+
 #notice h3 {
   font-size: 50px;
   font-weight: 500;
@@ -549,4 +556,28 @@ body {
 }
 #notice .more span {
   font-weight: 400;
+}
+
+.bgnotice {
+  padding-bottom: 10rem;
+}
+.bgnotice .noticeli {
+  border-bottom: 1px solid #232323;
+}
+.bgnotice .noticetxt.topboder {
+  border-top: 3px solid #232323;
+}
+.bgnotice .noticetxt span {
+  font-size: 40px;
+}
+.bgnotice .noticetxt .title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2;
+}
+.bgnotice .noticetxt .content {
+  font-size: 17px;
+}
+.bgnotice .noticetxt .bi {
+  font-size: 2rem;
 }

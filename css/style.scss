@@ -820,6 +820,13 @@ body {
 
 // 공지사항
 
+.noticewrap {
+  height: 100vw;
+  max-height: 1400px;
+  background-image: url('../img/noticebg.png');
+  background-repeat: no-repeat;
+}
+
 #notice {
 
   h3 {
@@ -838,6 +845,47 @@ body {
 
     span {
       font-weight: 400;
+    }
+  }
+
+}
+
+.bgnotice {
+  // min-height: 1200px;
+  padding-bottom: 10rem;
+
+
+
+  .noticeli {
+    border-bottom: 1px solid $basiccolor;
+
+  }
+
+  .noticetxt {
+
+    &.topboder {
+      border-top: 3px solid $basiccolor;
+    }
+
+    span {
+      font-size: 40px;
+    }
+
+    .title {
+
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 2;
+    }
+
+    .content {
+      font-size: 17px;
+
+
+    }
+
+    .bi {
+      font-size: 2rem;
     }
   }
 
