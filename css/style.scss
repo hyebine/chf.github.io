@@ -730,6 +730,11 @@ body {
 
   .banner {
     gap: 1rem;
+
+    @media (max-width:990px) {
+      gap: 0;
+
+    }
   }
 }
 
@@ -760,6 +765,7 @@ body {
         & .i::before {
           content: '\F62A';
           font-family: "bootstrap-icons";
+          transform: translateY(-2px);
         }
 
         h3 {
@@ -821,8 +827,7 @@ body {
 // 공지사항
 
 .noticewrap {
-  height: 100vw;
-  max-height: 1400px;
+
   background-image: url('../img/noticebg.png');
   background-repeat: no-repeat;
 }
@@ -835,9 +840,14 @@ body {
     line-height: 2;
   }
 
-  p {
+  .notice_p {
     font-size: 20px;
     font-weight: 300;
+
+    @media (max-width:990px) {
+      margin-bottom: 2rem;
+    }
+
   }
 
   .more {
@@ -851,10 +861,15 @@ body {
 }
 
 .bgnotice {
-  // min-height: 1200px;
+
   padding-bottom: 10rem;
+  background-image: url('../img/noticeicon.png');
+  background-repeat: no-repeat;
+  background-position-y: 3rem;
 
-
+  @media (max-width:990px) {
+    background-image: none;
+  }
 
   .noticeli {
     border-bottom: 1px solid $basiccolor;
@@ -876,6 +891,8 @@ body {
       font-size: 20px;
       font-weight: 500;
       line-height: 2;
+
+
     }
 
     .content {
@@ -884,10 +901,110 @@ body {
 
     }
 
+
+    @media (max-width:990px) {
+      .title {
+        font-size: 16px;
+      }
+
+
+
+      .content {
+        font-size: 14px;
+
+
+      }
+    }
+
     .bi {
       font-size: 2rem;
     }
   }
 
+
+}
+
+
+// 하단
+
+#ft {
+  border-top: 2px solid #D4D4D4;
+  font-size: 15px;
+
+  .ft_info {
+    padding: 3rem 0 4rem;
+  }
+
+  .ft_link {
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .copy {
+    border-top: 1px solid #C1C1C1;
+
+    font-weight: 400;
+
+    p {
+      line-height: 4;
+    }
+  }
+}
+
+
+.ft_wrap {
+
+  // 패밀리사이트
+  .family {
+    border: 1px solid $basiccolor;
+
+    position: absolute;
+
+    .familya {
+      position: relative;
+      line-height: 2;
+    }
+
+    .ft_list {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .open .ft_list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+
+#ft {
+  @media (max-width:990px) {
+
+    .adress {
+      display: none;
+    }
+
+    .callcenter {
+      display: block;
+    }
+
+    .ft_link {
+      display: none;
+    }
+
+    .family {
+      display: none;
+    }
+
+    .copy {
+      border: 0;
+    }
+
+
+  }
 
 }

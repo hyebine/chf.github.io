@@ -472,6 +472,11 @@ body {
 #event .banner {
   gap: 1rem;
 }
+@media (max-width: 990px) {
+  #event .banner {
+    gap: 0;
+  }
+}
 
 #event .starevent {
   margin-top: 10rem;
@@ -499,6 +504,7 @@ body {
 #event .starevent .content .toptxt .i::before {
   content: "\f62a";
   font-family: "bootstrap-icons";
+  transform: translateY(-2px);
 }
 #event .starevent .content .toptxt h3 {
   font-size: 30px;
@@ -536,8 +542,6 @@ body {
   }
 }
 .noticewrap {
-  height: 100vw;
-  max-height: 1400px;
   background-image: url("../img/noticebg.png");
   background-repeat: no-repeat;
 }
@@ -547,9 +551,14 @@ body {
   font-weight: 500;
   line-height: 2;
 }
-#notice p {
+#notice .notice_p {
   font-size: 20px;
   font-weight: 300;
+}
+@media (max-width: 990px) {
+  #notice .notice_p {
+    margin-bottom: 2rem;
+  }
 }
 #notice .more {
   margin-top: 4rem;
@@ -560,6 +569,14 @@ body {
 
 .bgnotice {
   padding-bottom: 10rem;
+  background-image: url("../img/noticeicon.png");
+  background-repeat: no-repeat;
+  background-position-y: 3rem;
+}
+@media (max-width: 990px) {
+  .bgnotice {
+    background-image: none;
+  }
 }
 .bgnotice .noticeli {
   border-bottom: 1px solid #232323;
@@ -578,6 +595,68 @@ body {
 .bgnotice .noticetxt .content {
   font-size: 17px;
 }
+@media (max-width: 990px) {
+  .bgnotice .noticetxt .title {
+    font-size: 16px;
+  }
+  .bgnotice .noticetxt .content {
+    font-size: 14px;
+  }
+}
 .bgnotice .noticetxt .bi {
   font-size: 2rem;
+}
+
+#ft {
+  border-top: 2px solid #D4D4D4;
+  font-size: 15px;
+}
+#ft .ft_info {
+  padding: 3rem 0 4rem;
+}
+#ft .ft_link strong {
+  font-weight: 500;
+}
+#ft .copy {
+  border-top: 1px solid #C1C1C1;
+  font-weight: 400;
+}
+#ft .copy p {
+  line-height: 4;
+}
+
+.ft_wrap .family {
+  border: 1px solid #232323;
+  position: absolute;
+}
+.ft_wrap .family .familya {
+  position: relative;
+  line-height: 2;
+}
+.ft_wrap .family .ft_list {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.ft_wrap .family .open .ft_list {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 990px) {
+  #ft .adress {
+    display: none;
+  }
+  #ft .callcenter {
+    display: block;
+  }
+  #ft .ft_link {
+    display: none;
+  }
+  #ft .family {
+    display: none;
+  }
+  #ft .copy {
+    border: 0;
+  }
 }

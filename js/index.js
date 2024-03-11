@@ -46,3 +46,12 @@ $(document).ready(function () {
   });
 });
 
+
+// 하단
+
+$(document).ready(function () {
+  $('.familya').click(function (e) {
+    e.preventDefault();
+    $(this).siblings('.ft_list').toggleClass('open');
+  });
+});
