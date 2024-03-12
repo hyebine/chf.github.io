@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -444,21 +445,37 @@ body {
 
 #subscroll {
   margin: 7rem 0;
+  width: 100%;
+  overflow: hidden;
 }
-#subscroll .swiper-wrapper {
-  transition-timing-function: linear;
-  overflow-x: hidden;
+#subscroll .scoroll {
+  position: relative;
+  width: 6000px;
+  gap: 0 5rem;
 }
-#subscroll .swiper-wrapper .swiper-slide {
+#subscroll .scoroll.list {
+  animation: scroll-animation 20s linear infinite;
+}
+#subscroll .scoroll .slidetxt {
   font-size: 80px;
   font-weight: 700;
   white-space: nowrap;
+  width: 900px;
 }
-#subscroll .swiper-wrapper .outtxt {
+#subscroll .scoroll .outtxt {
   color: #fff;
   -webkit-text-stroke: 2px #232323;
 }
 
+@keyframes scroll-animation {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -900px;
+    /* 텍스트 width와 동일 */
+  }
+}
 @font-face {
   font-family: "GmarketSansMedium";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
@@ -531,6 +548,9 @@ body {
 }
 
 @media (max-width: 990px) {
+  .content {
+    padding-top: 2rem;
+  }
   .event_wrap {
     flex-direction: column-reverse !important;
     text-align: center !important;
@@ -580,6 +600,7 @@ body {
 }
 .bgnotice .noticeli {
   border-bottom: 1px solid #232323;
+  line-height: 2;
 }
 .bgnotice .noticetxt.topboder {
   border-top: 3px solid #232323;
@@ -590,7 +611,6 @@ body {
 .bgnotice .noticetxt .title {
   font-size: 20px;
   font-weight: 500;
-  line-height: 2;
 }
 .bgnotice .noticetxt .content {
   font-size: 17px;
@@ -605,6 +625,9 @@ body {
 }
 .bgnotice .noticetxt .bi {
   font-size: 2rem;
+}
+.bgnotice .noticetxt .bi-arrow-right-short.open::before {
+  content: "\f124";
 }
 
 #ft {
@@ -626,21 +649,46 @@ body {
 }
 
 .ft_wrap .family {
-  border: 1px solid #232323;
-  position: absolute;
+  white-space: nowrap;
+  position: relative;
 }
 .ft_wrap .family .familya {
   position: relative;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 2;
+  border: 1px solid #232323;
+  padding: 0 20px;
+}
+.ft_wrap .family .familya .bi-chevron-down {
+  width: 0;
+  padding-left: 30px;
+  padding-right: 10px;
 }
 .ft_wrap .family .ft_list {
   position: absolute;
   opacity: 0;
   visibility: hidden;
+  line-height: 2;
+  border: 1px solid #232323;
+  background-color: #fff;
+  width: 165px;
+  z-index: 100;
+  padding: 10px 20px;
+  bottom: 31px;
 }
-.ft_wrap .family .open .ft_list {
+.ft_wrap .family .ft_list .list_link {
+  font-size: 14px;
+}
+.ft_wrap .family .ft_list.open {
   opacity: 1;
   visibility: visible;
+}
+.ft_wrap .family .bi-chevron-down.open::before {
+  content: "\f286";
+}
+.ft_wrap .sns {
+  width: 128px;
 }
 
 @media (max-width: 990px) {

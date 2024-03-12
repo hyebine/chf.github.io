@@ -520,14 +520,6 @@ body {
 
 }
 
-// .ml-n3px {
-//   margin-left: -3px;
-// }
-
-// .mt-n3px {
-//   margin-top: -3px;
-// }
-
 .pro_content {
   margin-top: -20.5rem;
 
@@ -687,31 +679,56 @@ body {
 
 #subscroll {
   margin: 7rem 0;
+  width: 100%;
+  overflow: hidden;
 
-  .swiper-wrapper {
-    transition-timing-function: linear;
-    overflow-x: hidden;
+  .scoroll {
+    position: relative;
+    width: 6000px;
+    gap: 0 5rem;
 
-    .swiper-slide {
+
+    &.list {
+      animation: scroll-animation 20s linear infinite;
+
+    }
+
+    &.list2 {
+      // animation: scroll-animation2 20s linear infinite;
+
+    }
+
+
+    .slidetxt {
       font-size: 80px;
       font-weight: 700;
       white-space: nowrap;
-
-
-
-      // white-space: nowrap;
+      width: 900px;
     }
 
     .outtxt {
       color: #fff;
       -webkit-text-stroke: 2px $basiccolor;
-
-
     }
 
   }
 
 }
+
+
+@keyframes scroll-animation {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -900px;
+    /* 텍스트 width와 동일 */
+  }
+}
+
+
+
 
 //이벤트
 
@@ -809,7 +826,13 @@ body {
 
 @media (max-width:990px) {
 
+
+  .content {
+    padding-top: 2rem;
+  }
+
   .event_wrap {
+
     flex-direction: column-reverse !important;
     text-align: center !important;
     padding-top: 4rem;
@@ -873,6 +896,7 @@ body {
 
   .noticeli {
     border-bottom: 1px solid $basiccolor;
+    line-height: 2;
 
   }
 
@@ -890,14 +914,13 @@ body {
 
       font-size: 20px;
       font-weight: 500;
-      line-height: 2;
+
 
 
     }
 
     .content {
       font-size: 17px;
-
 
     }
 
@@ -907,17 +930,18 @@ body {
         font-size: 16px;
       }
 
-
-
       .content {
         font-size: 14px;
-
-
       }
     }
 
     .bi {
       font-size: 2rem;
+    }
+
+
+    .bi-arrow-right-short.open::before {
+      content: "\F124";
     }
   }
 
@@ -957,25 +981,61 @@ body {
 
   // 패밀리사이트
   .family {
-    border: 1px solid $basiccolor;
+    white-space: nowrap;
+    position: relative;
 
-    position: absolute;
 
     .familya {
       position: relative;
+      font-size: 15px;
+      font-weight: 400;
       line-height: 2;
+
+      border: 1px solid $basiccolor;
+      padding: 0 20px;
+
+      .bi-chevron-down {
+        width: 0;
+        padding-left: 30px;
+        padding-right: 10px;
+      }
+
     }
 
     .ft_list {
       position: absolute;
       opacity: 0;
       visibility: hidden;
+      line-height: 2;
+      border: 1px solid $basiccolor;
+      background-color: #fff;
+      width: 165px;
+      z-index: 100;
+      padding: 10px 20px;
+      bottom: 31px;
+
+
+      .list_link {
+        font-size: 14px;
+      }
     }
 
-    .open .ft_list {
+    .ft_list.open {
       opacity: 1;
       visibility: visible;
     }
+
+
+
+    .bi-chevron-down.open::before {
+      content: "\F286";
+    }
+
+
+  }
+
+  .sns {
+    width: 128px;
   }
 }
 
@@ -983,7 +1043,6 @@ body {
 
 #ft {
   @media (max-width:990px) {
-
     .adress {
       display: none;
     }
@@ -1003,8 +1062,6 @@ body {
     .copy {
       border: 0;
     }
-
-
   }
 
 }

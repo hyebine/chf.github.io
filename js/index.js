@@ -43,6 +43,7 @@ $(document).ready(function () {
   $('.noticetxt').click(function (e) {
     e.preventDefault();
     $(this).next('.content').toggleClass('d-none');
+    $(this).find('.bi-arrow-right-short').toggleClass('open');
   });
 });
 
@@ -53,5 +54,6 @@ $(document).ready(function () {
   $('.familya').click(function (e) {
     e.preventDefault();
     $(this).siblings('.ft_list').toggleClass('open');
+    $(this).find('.bi-chevron-down').toggleClass('open');
   });
 });
