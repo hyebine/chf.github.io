@@ -456,6 +456,9 @@ body {
 #subscroll .scoroll.list {
   animation: scroll-animation 20s linear infinite;
 }
+#subscroll .scoroll.list2 {
+  animation: reverse-scroll-animation 20s linear infinite;
+}
 #subscroll .scoroll .slidetxt {
   font-size: 80px;
   font-weight: 700;
@@ -473,6 +476,15 @@ body {
   }
   100% {
     left: -900px;
+    /* 텍스트 width와 동일 */
+  }
+}
+@keyframes reverse-scroll-animation {
+  0% {
+    left: -900px;
+  }
+  100% {
+    left: 0;
     /* 텍스트 width와 동일 */
   }
 }
@@ -707,4 +719,27 @@ body {
   #ft .copy {
     border: 0;
   }
+}
+
+#tobtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #232323;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+#tobtn.on {
+  opacity: 1;
+}
+#tobtn .bi-arrow-up {
+  font-size: 2rem;
+}
+#tobtn .invisible {
+  font-size: 0;
 }

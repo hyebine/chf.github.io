@@ -694,7 +694,7 @@ body {
     }
 
     &.list2 {
-      // animation: scroll-animation2 20s linear infinite;
+      animation: reverse-scroll-animation 20s linear infinite;
 
     }
 
@@ -728,6 +728,16 @@ body {
 }
 
 
+@keyframes reverse-scroll-animation {
+  0% {
+    left: -900px;
+  }
+
+  100% {
+    left: 0;
+    /* 텍스트 width와 동일 */
+  }
+}
 
 
 //이벤트
@@ -1064,4 +1074,34 @@ body {
     }
   }
 
+}
+
+// 퀵 버튼
+
+#tobtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid $basiccolor;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: 0.5s ease;
+
+  &.on {
+    opacity: 1;
+  }
+
+  .bi-arrow-up {
+    font-size: 2rem;
+  }
+
+  .invisible {
+    font-size: 0;
+  }
 }

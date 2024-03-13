@@ -57,3 +57,20 @@ $(document).ready(function () {
     $(this).find('.bi-chevron-down').toggleClass('open');
   });
 });
+
+
+// 탑버튼
+$(window).scroll(function () {
+
+  if ($(this).scrollTop() > 100) {
+    $("#tobtn").addClass("on");
+  }
+  else {
+    $("#tobtn").removeClass("on");
+  }
+
+});
+
+$("#tobtn").click(function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
