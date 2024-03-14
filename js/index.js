@@ -24,10 +24,10 @@ var mainswiper = new Swiper("#mainslide .swiper", {
     el: "#mainslide .swiper-pagination",
     clickable: true,
   },
-  // autoplay: {
-  //   delay: 4000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
 });
 
 

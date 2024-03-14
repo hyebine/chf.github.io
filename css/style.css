@@ -215,12 +215,34 @@ body {
 #mainslide .swiper .swiper-slide .content h3 {
   font-size: 40px;
   line-height: 2;
+  animation: fadeInDown 2s;
 }
 #mainslide .swiper .swiper-slide .content p {
   font-size: 20px;
   font-weight: 200;
+  animation: fadeInUp 2s;
 }
 
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 80%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
 #mainslide .swiper_btn {
   z-index: 99999;
   position: absolute;
