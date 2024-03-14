@@ -110,11 +110,12 @@ body {
 
     // 반응형
     @media (max-width:990px) {
-      padding-top: 3rem;
+      // padding-top: 3rem;
       position: absolute;
       left: 0;
       right: 0;
       top: 100%;
+      min-height: 20rem;
 
       display: none;
       flex-direction: column;
@@ -278,7 +279,7 @@ body {
 
       @media (max-width:990px) {
         padding-top: 100%;
-        // background-size: 100%;
+        background-size: 100%;
 
 
       }
@@ -485,6 +486,17 @@ body {
       }
     }
 
+    @media (max-width:990px) {
+
+      h3 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+    }
+
   }
 }
 
@@ -541,6 +553,10 @@ body {
 
     padding: 2rem;
 
+    @media (max-width:990px) {
+      min-height: 270px;
+
+    }
 
     a {
       height: 100%;
@@ -576,12 +592,18 @@ body {
         font-weight: 500;
         margin-bottom: auto;
 
+        @media (max-width:990px) {
+          font-size: 15px;
+        }
+
       }
 
       .timeinfo {
         font-size: 16px;
       }
     }
+
+
   }
 
 }
@@ -768,17 +790,23 @@ body {
 #event {
   .starevent {
     margin-top: 10rem;
-    max-height: 391px;
-    height: 100vw;
+    height: 391px;
     background-image: url('../img/eventbg.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
 
     @media (max-width:990px) {
-      height: 100vw;
-      max-height: 713px;
+
+      margin-top: 7rem;
+
+
+      height: auto;
+      padding-bottom: 17vw;
+
       background-image: url('../img/moeventbg.jpg');
       background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: center;
 
     }
 
@@ -836,7 +864,6 @@ body {
 
 @media (max-width:990px) {
 
-
   .content {
     padding-top: 2rem;
   }
@@ -854,6 +881,8 @@ body {
     }
   }
 
+
+
 }
 
 
@@ -863,6 +892,10 @@ body {
 
   background-image: url('../img/noticebg.png');
   background-repeat: no-repeat;
+
+  @media (max-width:990px) {
+    padding-top: 5rem;
+  }
 }
 
 #notice {
@@ -925,8 +958,6 @@ body {
       font-size: 20px;
       font-weight: 500;
 
-
-
     }
 
     .content {
@@ -936,8 +967,18 @@ body {
 
 
     @media (max-width:990px) {
+
+      span {
+        font-size: 2rem;
+      }
+
       .title {
-        font-size: 16px;
+        line-height: 1;
+
+        font-size: 1rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
 
       .content {
@@ -980,14 +1021,19 @@ body {
 
     font-weight: 400;
 
-    p {
+    .copytxt {
       line-height: 4;
+
+      @media (max-width:990px) {
+        white-space: nowrap;
+      }
     }
   }
 }
 
 
 .ft_wrap {
+
 
   // 패밀리사이트
   .family {
@@ -1046,6 +1092,7 @@ body {
 
   .sns {
     width: 128px;
+
   }
 }
 
@@ -1071,6 +1118,16 @@ body {
 
     .copy {
       border: 0;
+      font-size: 12px;
+    }
+
+    .ft_info {
+      padding: 2rem 0;
+
+      img {
+        max-width: 150px;
+
+      }
     }
   }
 
@@ -1103,5 +1160,14 @@ body {
 
   .invisible {
     font-size: 0;
+  }
+
+  @media (max-width:990px) {
+    width: 3rem;
+    height: 3rem;
+
+    .bi-arrow-up {
+      font-size: 1rem;
+    }
   }
 }
